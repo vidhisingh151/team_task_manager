@@ -1,7 +1,11 @@
 import axios from 'axios';
 
+// In production (Railway), the frontend is served from the same server,
+// so we use a relative path. In development, we use the Vite proxy.
+const baseURL = import.meta.env.VITE_API_URL || '/api';
+
 const api = axios.create({
-  baseURL: 'http://localhost:5000/api',
+  baseURL,
   headers: {
     'Content-Type': 'application/json'
   }
