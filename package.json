@@ -1,0 +1,14 @@
+{
+  "name": "team-task-manager",
+  "version": "1.0.0",
+  "description": "Full-stack Team Task Manager",
+  "scripts": {
+    "start": "node server/index.js",
+    "build": "npm install --prefix server && npm install --prefix client && npm run build --prefix client",
+    "dev:server": "npm run dev --prefix server",
+    "dev:client": "npm run dev --prefix client"
+  },
+  "engines": {
+    "node": ">=18.0.0"
+  }
+}
