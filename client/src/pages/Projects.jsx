@@ -145,7 +145,7 @@ const Projects = () => {
           {projects.map((project) => (
             <Link to={`/projects/${project._id}`} key={project._id} className="ui-card" style={{ display: 'block', color: 'inherit' }}>
               <h3 style={{ marginBottom: '0.5rem', display: 'flex', alignItems: 'center', gap: '0.5rem' }}>
-                <Folder size={20} color="var(--primary)" />
+                <Folder size={20} color="var(--text-dark)" />
                 {project.name}
               </h3>
               <p style={{ fontSize: '0.875rem', marginBottom: '1rem' }}>
@@ -191,7 +191,7 @@ const Projects = () => {
 
               <div className="form-group">
                 <label className="form-label">Assign Members</label>
-                <div style={{ maxHeight: '150px', overflowY: 'auto', background: 'rgba(0,0,0,0.2)', padding: '0.5rem', borderRadius: '8px', border: '1px solid var(--glass-border)' }}>
+                <div style={{ maxHeight: '150px', overflowY: 'auto', background: 'var(--bg-input)', padding: '0.5rem', borderRadius: '8px', border: '1px solid var(--border-light)' }}>
                   {users.map(u => (
                     <div key={u._id} style={{ display: 'flex', alignItems: 'center', gap: '0.5rem', marginBottom: '0.5rem' }}>
                       <input

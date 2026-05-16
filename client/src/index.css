@@ -12,6 +12,12 @@
   --text-dark: #0f172a;
   --text-gray: #64748b;
   --border-light: #e2e8f0;
+  --bg-card: #ffffff;
+  --bg-input: #ffffff;
+  --text-muted: #94a3b8;
+  --glass-bg: rgba(255, 255, 255, 0.8);
+  --glass-border: rgba(0, 0, 0, 0.1);
+
 
   --danger: #ef4444;
   --danger-bg: #fee2e2;
@@ -133,6 +139,16 @@ p {
   color: var(--text-gray);
 }
 
+.badge-progress {
+  background: var(--warning-bg);
+  color: var(--warning);
+}
+
+.badge-todo {
+  background: var(--info-bg);
+  color: var(--info);
+}
+
 /* Buttons */
 .btn {
   display: inline-flex;
@@ -200,7 +216,24 @@ p {
   box-shadow: 0 0 0 3px rgba(15, 23, 42, 0.1);
 }
 
+.status-select {
+  padding: 0.25rem 0.5rem;
+  border-radius: 6px;
+  border: 1px solid var(--border-light);
+  background: var(--bg-input);
+  color: var(--text-dark);
+  font-size: 0.75rem;
+  cursor: pointer;
+}
+
 /* Layout Utilities */
+.container {
+  width: 100%;
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 1rem;
+}
+
 .app-container {
   display: flex;
   height: 100vh;
@@ -356,11 +389,16 @@ body.dark {
   --bg-main: #0f172a;
   --bg-sidebar: #111827;
   --bg-hover: #1e293b;
+  --bg-card: #1e293b;
+  --bg-input: #334155;
 
-  --text-dark: #ffffff;
+  --text-dark: #f8fafc;
   --text-gray: #94a3b8;
+  --text-muted: #64748b;
 
   --border-light: rgba(255, 255, 255, 0.08);
+  --glass-bg: rgba(15, 23, 42, 0.8);
+  --glass-border: rgba(255, 255, 255, 0.1);
 }
 
 /* NAVBAR */

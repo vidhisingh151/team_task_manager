@@ -13,7 +13,7 @@ const Sidebar = () => {
 
   return (
     <div className="sidebar">
-      <Link to="/" style={{ display: 'flex', alignItems: 'center', gap: '0.5rem', marginBottom: '2rem', color: 'var(--primary)', fontSize: '1.25rem', fontWeight: 800 }}>
+      <Link to="/" style={{ display: 'flex', alignItems: 'center', gap: '0.5rem', marginBottom: '2rem', color: 'var(--text-dark)', fontSize: '1.25rem', fontWeight: 800 }}>
         <div style={{ background: 'var(--primary)', color: 'white', padding: '0.25rem', borderRadius: '8px' }}>
           <CheckSquare size={20} />
         </div>
@@ -25,13 +25,13 @@ const Sidebar = () => {
           Main Menu
         </p>
 
-        <Link to="/dashboard" className={`btn ${location.pathname === '/dashboard' || location.pathname === '/' ? 'btn-secondary' : ''}`} style={{ justifyContent: 'flex-start', background: location.pathname === '/dashboard' || location.pathname === '/' ? 'var(--bg-hover)' : 'transparent', border: 'none' }}>
+        <Link to="/dashboard" className={`btn ${location.pathname === '/dashboard' || location.pathname === '/' ? 'btn-secondary' : ''}`} style={{ justifyContent: 'flex-start', background: location.pathname === '/dashboard' || location.pathname === '/' ? 'var(--bg-hover)' : 'transparent', border: 'none', color: 'var(--text-dark)' }}>
           <LayoutDashboard size={18} /> Dashboard
         </Link>
-        <Link to="/projects" className={`btn ${location.pathname.includes('/projects') ? 'btn-secondary' : ''}`} style={{ justifyContent: 'flex-start', background: location.pathname.includes('/projects') ? 'var(--bg-hover)' : 'transparent', border: 'none' }}>
+        <Link to="/projects" className={`btn ${location.pathname.includes('/projects') ? 'btn-secondary' : ''}`} style={{ justifyContent: 'flex-start', background: location.pathname.includes('/projects') ? 'var(--bg-hover)' : 'transparent', border: 'none', color: 'var(--text-dark)' }}>
           <Folder size={18} /> Projects
         </Link>
-        <Link to="/tasks" className={`btn ${location.pathname === '/tasks' ? 'btn-secondary' : ''}`} style={{ justifyContent: 'flex-start', background: location.pathname === '/tasks' ? 'var(--bg-hover)' : 'transparent', border: 'none' }}>
+        <Link to="/tasks" className={`btn ${location.pathname === '/tasks' ? 'btn-secondary' : ''}`} style={{ justifyContent: 'flex-start', background: location.pathname === '/tasks' ? 'var(--bg-hover)' : 'transparent', border: 'none', color: 'var(--text-dark)' }}>
           <CheckSquare size={18} /> Tasks
         </Link>
       </div>
@@ -41,7 +41,7 @@ const Sidebar = () => {
           <Users size={20} color="var(--text-gray)" />
         </div>
         <div>
-          <p style={{ fontSize: '0.875rem', fontWeight: 600, color: 'var(--primary)', margin: 0 }}>{user?.name}</p>
+          <p style={{ fontSize: '0.875rem', fontWeight: 600, color: 'var(--text-dark)', margin: 0 }}>{user?.name}</p>
           <p style={{ fontSize: '0.75rem', margin: 0 }}>{user?.role}</p>
         </div>
       </div>

@@ -219,7 +219,7 @@ const ProjectDetails = () => {
                 style={{
                   width: '200px',
                   height: '8px',
-                  background: 'rgba(255,255,255,0.1)',
+                  background: 'var(--border-light)',
                   borderRadius: '4px',
                   overflow: 'hidden'
                 }}
@@ -328,7 +328,7 @@ const ProjectDetails = () => {
             <form onSubmit={handleUpdateMembers}>
               <div className="form-group">
                 <label className="form-label">Select Members</label>
-                <div style={{ maxHeight: '200px', overflowY: 'auto', background: 'var(--bg-hover)', padding: '0.5rem', borderRadius: '8px', border: '1px solid var(--border-light)' }}>
+                <div style={{ maxHeight: '200px', overflowY: 'auto', background: 'var(--bg-input)', padding: '0.5rem', borderRadius: '8px', border: '1px solid var(--border-light)' }}>
                   {allUsers.map(u => (
                     <div key={u._id} style={{ display: 'flex', alignItems: 'center', gap: '0.5rem', marginBottom: '0.5rem' }}>
                       <input

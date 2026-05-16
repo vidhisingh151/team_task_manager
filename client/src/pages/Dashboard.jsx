@@ -99,7 +99,7 @@ const Dashboard = () => {
     <div className="animate-fade-in">
       <div style={{ display: 'flex', justifyContent: 'space-between', alignItems: 'center', marginBottom: '2rem' }}>
         <div>
-          <h2 style={{ fontSize: '1.75rem', marginBottom: '0.25rem' }}>Welcome Back, {user?.name.split(' ')[0]}! 👋</h2>
+          <h2 style={{ fontSize: '1.75rem', marginBottom: '0.25rem' }}>Welcome Back, {user?.name?.split(' ')[0]}! 👋</h2>
           <p>Here's what's happening with your projects today.</p>
         </div>
         <Link to="/projects" className="btn btn-primary" style={{ borderRadius: '9999px', fontSize: '0.875rem' }}>
@@ -113,7 +113,7 @@ const Dashboard = () => {
         {/* Active Projects */}
         <div className="stat-card hover-card">
           <div style={{ display: 'flex', justifyContent: 'space-between', alignItems: 'flex-start' }}>
-            <div className="icon-box" style={{ background: '#eff6ff', color: '#3b82f6' }}>
+            <div className="icon-box" style={{ background: 'var(--info-bg)', color: 'var(--info)' }}>
               <Briefcase size={24} />
             </div>
             <span className="badge badge-live">↗ Live</span>
@@ -128,7 +128,7 @@ const Dashboard = () => {
         {/* Total Tasks */}
         <div className="stat-card hover-card">
           <div style={{ display: 'flex', justifyContent: 'space-between', alignItems: 'flex-start' }}>
-            <div className="icon-box" style={{ background: '#f1f5f9', color: '#64748b' }}>
+            <div className="icon-box" style={{ background: 'var(--bg-hover)', color: 'var(--text-gray)' }}>
               <ListTodo size={24} />
             </div>
             <span className="badge badge-live">↗ Live</span>
@@ -143,7 +143,7 @@ const Dashboard = () => {
         {/* Completed */}
         <div className="stat-card hover-card">
           <div style={{ display: 'flex', justifyContent: 'space-between', alignItems: 'flex-start' }}>
-            <div className="icon-box" style={{ background: '#f0fdf4', color: '#10b981' }}>
+            <div className="icon-box" style={{ background: 'var(--success-bg)', color: 'var(--success)' }}>
               <CheckCircle size={24} />
             </div>
             <span className="badge badge-live">↗ Live</span>
@@ -158,7 +158,7 @@ const Dashboard = () => {
         {/* Overdue */}
         <div className="stat-card hover-card">
           <div style={{ display: 'flex', justifyContent: 'space-between', alignItems: 'flex-start' }}>
-            <div className="icon-box" style={{ background: '#fef2f2', color: '#ef4444' }}>
+            <div className="icon-box" style={{ background: 'var(--danger-bg)', color: 'var(--danger)' }}>
               <AlertCircle size={24} />
             </div>
             <span className="badge badge-live" style={{ background: '#fef2f2', color: '#ef4444' }}>! Alert</span>
@@ -217,12 +217,12 @@ const Dashboard = () => {
             </p>
           </div>
 
-          <div
+            <div
             style={{
               padding: '0.6rem 1rem',
               borderRadius: '12px',
-              background: '#eef2ff',
-              color: '#4f46e5',
+              background: 'var(--info-bg)',
+              color: 'var(--info)',
               fontWeight: '700',
               fontSize: '0.9rem',
               whiteSpace: 'nowrap',
@@ -259,9 +259,9 @@ const Dashboard = () => {
                 aspectRatio: '1 / 1',
                 borderRadius: '50%',
                 background: `conic-gradient(
-            #10b981 0deg ${donePercentage * 3.6}deg,
-            #f59e0b ${donePercentage * 3.6}deg ${(donePercentage + progressPercentage) * 3.6}deg,
-            #e5e7eb ${(donePercentage + progressPercentage) * 3.6}deg 360deg
+            var(--success) 0deg ${donePercentage * 3.6}deg,
+            var(--warning) ${donePercentage * 3.6}deg ${(donePercentage + progressPercentage) * 3.6}deg,
+            var(--border-light) ${(donePercentage + progressPercentage) * 3.6}deg 360deg
           )`,
                 display: 'flex',
                 alignItems: 'center',
@@ -295,7 +295,7 @@ const Dashboard = () => {
                       'clamp(2rem,6vw,3.5rem)',
                     fontWeight: '800',
                     lineHeight: 1,
-                    color: '#111827',
+                    color: 'var(--text-dark)',
                   }}
                 >
                   {completionRate}%
@@ -358,7 +358,7 @@ const Dashboard = () => {
                   width: '100%',
                   height: '10px',
                   borderRadius: '999px',
-                  background: '#e5e7eb',
+                  background: 'var(--bg-hover)',
                   overflow: 'hidden',
                 }}
               >
@@ -366,7 +366,7 @@ const Dashboard = () => {
                   style={{
                     width: `${todoPercentage}%`,
                     height: '100%',
-                    background: '#9ca3af',
+                    background: 'var(--text-gray)',
                     borderRadius: '999px',
                   }}
                 />
@@ -398,7 +398,7 @@ const Dashboard = () => {
                   width: '100%',
                   height: '10px',
                   borderRadius: '999px',
-                  background: '#e5e7eb',
+                  background: 'var(--bg-hover)',
                   overflow: 'hidden',
                 }}
               >
@@ -406,7 +406,7 @@ const Dashboard = () => {
                   style={{
                     width: `${progressPercentage}%`,
                     height: '100%',
-                    background: '#f59e0b',
+                    background: 'var(--warning)',
                     borderRadius: '999px',
                   }}
                 />
@@ -438,7 +438,7 @@ const Dashboard = () => {
                   width: '100%',
                   height: '10px',
                   borderRadius: '999px',
-                  background: '#e5e7eb',
+                  background: 'var(--bg-hover)',
                   overflow: 'hidden',
                 }}
               >
@@ -446,7 +446,7 @@ const Dashboard = () => {
                   style={{
                     width: `${donePercentage}%`,
                     height: '100%',
-                    background: '#10b981',
+                    background: 'var(--success)',
                     borderRadius: '999px',
                   }}
                 />
@@ -500,8 +500,7 @@ const Dashboard = () => {
                   style={{
                     padding: '0.8rem 1rem',
                     borderRadius: '14px',
-                    background:
-                      'rgba(255,255,255,0.08)',
+                    background: 'rgba(255,255,255,0.15)',
                     textAlign: 'center',
                     minWidth: '110px',
                   }}
